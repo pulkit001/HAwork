@@ -1,0 +1,46 @@
+{% extends "Work/Elements/base.html" %}
+{% block footer %}
+{% load static %}
+  <link rel="stylesheet" href={% static "Work/css/footer.css" %}>
+  <!-- Footer Start -->
+          <div class="footer wow fadeIn" data-wow-delay="0.3s" id="contact">
+              <div class="container pt-5">
+                  <div class="row">
+                      <div class="col-sm">
+                          <div class="footer-contact">
+                              <h3>Contact</h3>
+                              <p><i class="fa fa-map-marker-alt"></i>IITB</p>
+                              <p><i class="fa fa-phone-alt"></i>+91-7976545599</p>
+                              <p><i class="fa fa-envelope"></i>pulkit.jdl@gmail.com</p>
+                              <div class="footer-social">
+                                  <a href=""><i class="fab fa-twitter"></i></a>
+                                  <a href=""><i class="fab fa-facebook-f"></i></a>
+                                  <a href=""><i class="fab fa-youtube"></i></a>
+                                  <a href=""><i class="fab fa-instagram"></i></a>
+                                  <a href=""><i class="fab fa-linkedin-in"></i></a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-sm">
+                          <div class="footer-link">
+                              <h3>Register A Complain</h3>
+              <a href = "">Lost </a>
+
+                <a href = "">Found</a>
+                          </div>
+                      </div>
+                      <div class="col-sm">
+                          <div class="footer-link">
+                              <h3>Useful Pages</h3>
+                              <a href="#about">About Us</a>
+                              <a href="#team">More </a>
+                              <a href="#comp">Competitions</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="container copyright">
+              </div>
+          </div>
+          <!-- Footer End -->
+{% endblock %}

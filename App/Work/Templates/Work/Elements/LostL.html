@@ -1,0 +1,30 @@
+{% extends "Work/Elements/base.html" %}
+{% load  static %}
+{% block LostL %}
+<link rel="stylesheet" href={% static "Work/css/LostAndFound.css" %}>
+  <center><h1 class="pd-5">Recently Lost Items</h1></center>
+<div class="container flexman">
+{% for item in ApprovedLost %}
+<div class="card">
+  <div class="cardTop" style= "background-image :url({% static item.ImageLost %}) ;" >
+  </div>
+  <div class="cardBottom">
+    <div class="cardText">
+      <h3 class="cardTitle">{{item.Article}}</h3>
+      <h4 class="cardInfo">More Info</h4>
+      <div class="cardHoverText">
+        Details
+        <ul>
+          <li>Lost On : {{item.Date}}</li>
+          <li>Lost at : {{item.PlaceLost}}</li>
+          <li>On Any clue Contact : {{item.Contact}}</li>
+          <li>You Can also Mail : {{item.LDAP}}</li>
+        </ul>
+      </div>
+      <!--       Only visibile when parent element is hovered over -->
+    </div>
+  </div>
+</div>
+{% endfor %}
+</div>
+{%endblock%}

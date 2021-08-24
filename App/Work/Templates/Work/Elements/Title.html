@@ -1,0 +1,16 @@
+{% extends "Work/Elements/base.html" %}
+{% block Heading %}
+{% load static %}
+<link rel="stylesheet" href={% static "Work/css/Title.css" %}>
+<link rel='stylesheet' href='https://unpkg.com/modern-css-reset/dist/reset.min.css'>
+<link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting.css'>
+<link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting-cells.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@700&amp;display=swap'>
+<link rel='stylesheet' href='https://use.typekit.net/zlj2zcu.css'>
+<h1>
+  <span class="main" aria-label="boring" data-splitting>Security</span>
+</h1>
+<!-- partial -->
+  <script src='https://unpkg.com/splitting/dist/splitting.min.js'></script>
+<script src={% static "Work/js/Title.js" %}></script>
+{% endblock %}

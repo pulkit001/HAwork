@@ -1,0 +1,56 @@
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}
+
+    {% endblock %}</title>
+  </head>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <body>
+    <link rel="stylesheet" href={% static "Work/css/index.css" %}>
+    <script src={% static "Work/js/index.js" %} charset="utf-8"></script>
+
+    {% block Heading %}
+    {% endblock %}
+
+    {% block navbar %}
+    {% endblock %}
+
+    {% block carousal %}
+    {% endblock %}
+
+    {% block about %}
+    {% endblock %}
+
+    {% block lost %}
+    {% endblock %}
+
+    {% block found %}
+    {% endblock %}
+
+    {% block FoundL %}
+    {% endblock %}
+
+    {% block LostL %}
+    {% endblock %}
+
+    {% block Team %}
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock %}
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <script src={% static "Work/js/lib/easing/easing.min.js" %}></script>
+<script src={% static "Work/js/lib/wow/wow.min.js" %}></script>
+<script src={% static "Work/js/lib/owlcarousel/owl.carousel.min.js" %}></script>
+<script src={% static "Work/js/lib/isotope/isotope.pkgd.min.js" %}></script>
+<script src={% static "Work/js/lib/lightbox/js/lightbox.min.js" %}></script>
+<script src={% static "Work/js/lib/waypoints/waypoints.min.js" %}></script>
+<script src={% static "Work/js/lib/counterup/counterup.min.js" %}></script>
+<script src={% static "Work/js/lib/slick/slick.min.js" %}></script>
+  </body>
+</html>
