@@ -1,0 +1,35 @@
+{% include "Work/Elements/base.html" %}
+{% include "Work/Elements/navbar.html" %}
+{% load  static %}
+{% block LostL %}
+<script src="https://kit.fontawesome.com/a7e9f794eb.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href={% static "Work/css/LostAndFound.css" %}>
+<br>
+<br>
+<center><h1 class="pd-5">Recently Lost Items</h1></center>
+<br>{% include "Work/Elements/buttonLost.html" %}<br>
+<div class="containerProduct">
+{% for item in ApprovedLost %}
+<div class="block"
+style= "background-image :url({% static item.ImageLost %})">
+  <div class="overlay"></div>
+  <div class="block--text">
+    <div class="text--head"><a href= "Lost/{{item.slug}}">{{item.Article}}</a></div>
+    <div class="text--quote">
+    <ul>
+      <li> Lost On : {{item.Date}}</li>
+      <li> Lost At : {{item.PlaceLost}}</li>
+      <li> Owner: {{item.Name}}</li>
+      <li>
+        If found Please Contact : {{item.LDAP}}
+      </li>
+    </ul>
+    </div>
+  </div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
+</div>

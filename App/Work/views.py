@@ -38,3 +38,18 @@ def found(request):
             return render(request , 'Work/Found.html' , {"Found" : form})
         else:
             return render(request , 'Work/Found.html' ,{"Found" : form})
+
+def lostD (request , item) :
+    FoundLost = Lost.objects.get(slug = item)
+    return render(request , 'Work/LostD.html' , {"LostD" : FoundLost})
+
+def foundD (request , item) :
+    FoundFound = Found.objects.get(slug = item)
+    return render(request , 'Work/Foundd.html' , {"FoundD" : FoundFound})
+
+def LostL(request):
+    return render(request , "Work/LostL.html"  ,{"ApprovedLost" : ApprovedLost} )
+
+
+def FoundL(request):
+    return render(request , "Work/FoundL.html" , {"ApprovedFound" : ApprovedFound})
