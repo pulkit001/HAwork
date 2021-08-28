@@ -24,20 +24,49 @@
 
 
             <!-- Nav Bar Start -->
-    <div class="nav-bar">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav mr-auto">
-                        <a href="/" class="nav-item nav-link active">Home</a>
-                        <a href="/#about" class="nav-item nav-link">About</a>
-                        <a href="lost" class="nav-item nav-link">Lost</a>
-                        <a href="found" class="nav-item nav-link">Found</a>
-                        <a href="/#contact" class="nav-item nav-link">Contact</a>
-                        </div>
-                    </div>
+
+
+            <nav class="navbar">
+              <div class="containerNav">
+
+                <div class="navbar-header">
+                  <button class="navbar-toggler" data-toggle="open-navbar1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                </div>
+
+                <div class="navbar-menu" id="open-navbar1">
+                  <ul class="navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li class="navbar-dropdown">
+                      <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
+                        Report <i class="fa fa-angle-down"></i>
+                      </a>
+                      <ul class="dropdown" id="my-dropdown-id">
+                        <li><a href="/LostForm">Lost</a></li>
+                        <li class="separator"></li>
+                        <li><a href="/FoundForm">Found</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="navbar-dropdown">
+                      <a href="#" class="dropdown-toggler" data-dropdown="blog">
+                        Recent <i class="fa fa-angle-down"></i>
+                      </a>
+                      <ul class="dropdown" id="blog">
+                        <li><a href="/lost">Lost</a></li>
+                        <li class="separator"></li>
+                        <li><a href="/found">Found</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="/#about">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
             </nav>
-        </div>
-    </div>
+            <script src={% static "Work/js/navbar.js" %} charset="utf-8"></script>
     <!-- Nav Bar End -->
 {% endblock %}
